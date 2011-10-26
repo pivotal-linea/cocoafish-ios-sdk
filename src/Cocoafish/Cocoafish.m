@@ -111,9 +111,6 @@ void CCLog(NSString *format, ...) {
 	_currentUser = [[[CCUser alloc] initWithId:[prefs stringForKey:@"cc_user_id"] first:[prefs stringForKey:@"cc_user_first_name"] last:[prefs stringForKey:@"cc_user_last_name"] email:[prefs stringForKey:@"cc_user_email"] username:[prefs stringForKey:@"cc_username"]] retain];
 	if (_currentUser) {
 		[self restoreUserSession];
-        CCRequest *request = [[[CCRequest alloc] initWithDelegate:self httpMethod:@"GET" baseUrl:@"users/show/me.json" paramDict:nil] autorelease];
-
-        [request startAsynchronous];
 	}
 	
     // set up date formatter
