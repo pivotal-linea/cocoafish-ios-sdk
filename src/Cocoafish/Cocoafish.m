@@ -100,7 +100,7 @@ void CCLog(NSString *format, ...) {
 	if (customAppIds != nil) {
 		NSString *customAppId = [customAppIds objectForKey:@"Facebook"];
 		if (customAppId != nil) {
-			_facebook = [[Facebook alloc] initWithAppId:customAppId];
+			_facebook = [[Facebook alloc] initWithAppId:customAppId andDelegate:self];
 			_facebookAppId = [customAppId copy];
 			NSLog(@"Cocoafish: initialized facebook with app Id %@", customAppId);
 		}
@@ -192,7 +192,7 @@ void CCLog(NSString *format, ...) {
 	if (!found) {
 		[ccPermissions insertObject:@"offline_access" atIndex:0];
 	}
-	[_facebook authorize:permissions delegate:self];
+	[_facebook authorize:permissions];
 }
 
 -(void)unlinkFromFacebook:(NSError **)error

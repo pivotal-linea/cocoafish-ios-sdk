@@ -88,6 +88,7 @@ NSString * const CC_JSON_PROCESSED = @"processed";
 NSString * const CC_JSON_CONTENT_TYPE = @"content_type";
 NSString * const CC_JSON_URLS = @"urls";
 NSString * const CC_JSON_TAKEN_AT = @"taken_at";
+NSString * const CC_JSON_REVIEWS_COUNT = @"reviews_count";
 
 // CCNameValuePair
 NSString * const CC_JSON_KEY_VALUES = @"keyvalues";

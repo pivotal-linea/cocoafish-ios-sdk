@@ -84,6 +84,7 @@ extern NSString * const CC_JSON_PROCESSED;
 extern NSString * const CC_JSON_CONTENT_TYPE;
 extern NSString * const CC_JSON_URLS;
 extern NSString * const CC_JSON_TAKEN_AT;
+extern NSString * const CC_JSON_REVIEWS_COUNT;
 
 // CCStatus
 extern NSString * const CC_JSON_STATUSES;

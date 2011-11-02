@@ -46,6 +46,7 @@ typedef enum PhotoSize {
 @property (nonatomic, retain, readonly) NSString *md5;
 @property (nonatomic, retain, readonly) NSString *title;
 @property (nonatomic, retain, readonly) NSDate *takenAt;
+@property (nonatomic, readonly) int reviewsCount;
 @property (nonatomic, readonly) BOOL processed;
 @property (nonatomic, retain, readonly) NSString *contentType;
 @property (nonatomic, retain, readonly) NSDate *customDate;

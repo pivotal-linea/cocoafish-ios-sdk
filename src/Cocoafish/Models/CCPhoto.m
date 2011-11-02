@@ -20,6 +20,7 @@
 @property (nonatomic, retain, readwrite) NSString *md5;
 @property (nonatomic, retain, readwrite) NSString *title;
 @property (nonatomic, retain, readwrite) NSDate *takenAt;
+@property (nonatomic, readwrite) int reviewsCount;
 @property (nonatomic, readwrite) BOOL processed;
 @property (nonatomic, retain, readwrite) NSString *contentType;
 @property (nonatomic, retain, readwrite) NSDictionary *urls;
@@ -54,6 +55,7 @@
 @synthesize user = _user;
 @synthesize exif = _exif;
 @synthesize takenAt = _takenAt;
+@synthesize reviewsCount = _reviewsCount;
 
 -(id)initWithJsonResponse:(NSDictionary *)jsonResponse {
 
@@ -63,6 +65,7 @@
         self.collections = [CCCollection arrayWithJsonResponse:jsonResponse class:[CCCollection class]];
 		self.md5 = [jsonResponse objectForKey:CC_JSON_MD5];
         self.title = [jsonResponse objectForKey:CC_JSON_TITLE];
+        self.reviewsCount = [[jsonResponse objectForKey:CC_JSON_REVIEWS_COUNT] intValue];
         
         NSString *takenAt = [jsonResponse objectForKey:CC_JSON_TAKEN_AT];
         if (takenAt) {

@@ -411,7 +411,7 @@
             if (response.meta) {
                 [errorUserInfo setObject:response.meta forKey:@"meta"];
             }
-            NSError *requestError = [NSError errorWithDomain:CC_DOMAIN code:CC_SERVER_ERROR userInfo:errorUserInfo];
+            NSError *requestError = [NSError errorWithDomain:CC_DOMAIN code:response.meta.code userInfo:errorUserInfo];
             [_requestDelegate ccrequest:origRequest didFailWithError:requestError];
         }
     }
