@@ -123,6 +123,7 @@
 	self.urls = nil;
     self.user = nil;
     self.exif = nil;
+    self.takenAt = nil;
 	[super dealloc];
 }
 
