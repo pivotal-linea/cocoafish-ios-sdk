@@ -222,6 +222,7 @@
 @synthesize status = _status;
 @synthesize message = _message;
 @synthesize code = _code;
+@synthesize ccCode = _ccCode;
 @synthesize methodName = _methodName;
 @synthesize pagination = _pagination;
 
@@ -240,6 +241,8 @@
 		_code = tmpValue ? [tmpValue intValue] : 0;
 		self.status = [meta objectForKey:CC_JSON_META_STATUS];
         _pagination = [[CCPagination alloc] initWithJsonResponse:meta];
+		tmpValue = [meta objectForKey:CC_JSON_META_CC_CODE];
+		_ccCode = tmpValue ? [tmpValue intValue] : 0;
 	
 	}
 	return self;

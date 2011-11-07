@@ -19,6 +19,7 @@ extern const NSInteger CC_TIMEOUT;
 extern NSString * const CC_STATUS_OK;
 extern NSString * const CC_JSON_META;
 extern NSString * const CC_JSON_META_CODE;
+extern NSString * const CC_JSON_META_CC_CODE;
 extern NSString * const CC_JSON_META_STATUS;
 extern NSString * const CC_JSON_META_MESSAGE;
 

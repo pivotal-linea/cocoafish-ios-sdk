@@ -47,10 +47,12 @@
 	NSInteger _code;
 	NSString *_message;
 	NSString *_methodName; // method name
+    NSInteger _ccCode;
     CCPagination *_pagination;
 }
 
 @property (nonatomic, readonly) NSInteger code;
+@property (nonatomic, readonly) NSInteger ccCode;
 @property (nonatomic, retain, readonly) NSString *message;
 @property (nonatomic, retain, readonly) NSString *status;
 @property (nonatomic, retain, readonly) NSString *methodName;

@@ -20,6 +20,7 @@ const NSInteger CC_TIMEOUT = 30;
 NSString * const CC_STATUS_OK = @"ok";
 NSString * const CC_JSON_META = @"meta";
 NSString * const CC_JSON_META_CODE = @"code";
+NSString * const CC_JSON_META_CC_CODE = @"cc_code";
 NSString * const CC_JSON_META_STATUS = @"status";
 NSString * const CC_JSON_META_MESSAGE = @"message";
 
